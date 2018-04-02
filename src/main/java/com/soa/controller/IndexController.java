@@ -26,6 +26,7 @@ public class IndexController extends ExceptionController{
 	@ResponseBody
 	@RequestMapping("/findUserModule.do")
 	public JsonResult findUserModule(String user_id) throws MyException {
+		System.out.println(1);
 		return indexService.findUserModule(user_id);
 	}
 }
