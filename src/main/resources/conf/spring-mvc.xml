@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="
+		 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+		 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+		 http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd  
+		 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd  
+		 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		 http://www.springframework.org/schema/mvc
+		 http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		 http://www.springframework.org/schema/cache 
+		 http://www.springframework.org/schema/cache/spring-cache.xsd">
+	<!--=================启用注解驱动=================================== -->
+	<mvc:annotation-driven />
+	<!--=================配置组件扫描=================================== -->
+	<context:component-scan base-package="com.soa" />
+	<!--=================配置拦截器=================================== -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!--拦截的请求 -->
+			<mvc:mapping path="/**"/>
+			<!--放过的请求 -->
+			<mvc:exclude-mapping path="/login/checkUser.do"/>
+			<bean class="com.soa.intercepter.LoginIntercepter"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<!--=================启用Spring对基于注解的Cache的支持=================================== -->
+	<cache:annotation-driven cache-manager="ehcacheManager" />
+	<!-- cacheManager工厂类，指定ehcache.xml的位置 -->
+	<bean id="ehcacheManagerFactory"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:conf/ehcache.xml" />
+	</bean>
+	<!-- 声明cacheManager -->
+	<bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager" ref="ehcacheManagerFactory" />
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>在线考试系统</title>
+<link rel="stylesheet" href="css/supersized.css">
+<link rel="stylesheet" href="layui/css/layui.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div class="page-container">
+		<form class="layui-form" action="" method="post">
+			<h1 id="title">考试系统</h1>
+			<div class="layui-form-item">
+				<label class="layui-form-label">用户名:</label>
+				<div class="layui-input-inline">
+					<input type="text" name="user_name" required lay-verify="username"
+						placeholder="请输入用户名" autocomplete="off" class="layui-input">
+				</div>
+				<div class="layui-form-mid layui-word-aux">由3到20位字母、数字和下划线组成</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">密码:</label>
+				<div class="layui-input-inline">
+					<input type="password" name="user_password" required
+						lay-verify="password" placeholder="请输入密码" autocomplete="off"
+						class="layui-input">
+				</div>
+				<div class="layui-form-mid layui-word-aux">由3到20位字母、数字和下划线组成</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+						<button class="layui-btn" lay-submit lay-filter="submit">登录</button>
+					<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+	<!--------------------supersized全屏动态脚本------------------------------>
+	<script type="text/javascript" src="scripts/supersized.3.2.7.min.js"></script>
+	<!--------------------supersized初始化参数------------------------------>
+	<script type="text/javascript" src="scripts/supersized-init.js"></script>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<!---------------------全局地址脚本------------------------------>
+	<script type="text/javascript" src="scripts/js/path.js"></script>
+	<!-- ------------------cookie工具类------------------------------------->
+	<script type="text/javascript" src="scripts/cookie_util.js"></script>
+	<script type="text/javascript" src="scripts/js/login.js"></script>
+</body>
+</html>

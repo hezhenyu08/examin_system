@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.soa.dao.LoginDAO">
+	<select id="findUserIdByName" resultType="map" parameterType="string">
+		select 
+			user_id,user_password 
+		from 
+			user_info
+		where 
+			user_account=#{user_name}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
