@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>在线考试系统主页</title>
+<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+<script type="text/javascript" src="layui/layui.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="head">
+		<div id="logo">
+			<span> 在线考试系统 </span>
+		</div>
+		<ul class="layui-nav" lay-filter="nav">
+			<li class="layui-nav-item"><a href="javascript:;" id="user_name"><img src="img/bird.png" class="layui-nav-img"></a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:;" href-url="personInfo.html">个人信息</a>
+					</dd>
+					<dd>
+						<a href="javascript:;" href-url="changePassword.html">修改密码</a>
+					</dd>
+					<dd>
+						<a href="login.html">返回登录页面</a>
+					</dd>
+				</dl></li>
+			<li class="layui-nav-item"><a href="javascript:;">帮助</li>
+		</ul>
+	</div>
+	<div id="body">
+		<ul id="examin_pic_ul">
+			<a href="javascript:;"><li id="subject_manage"></li></a>
+			<a href="javascript:;"><li id="user_manage"></li></a>
+			<a href="javascript:;"><li id="examin_arrange"></li></a>
+			<a href="javascript:;"><li id="examin_manage" ></li></a>
+			<a href="javascript:;"><li id="my_test"></li></a>
+			<a href="javascript:;"><li id="my_examin"></li></a>
+			<a href="javascript:;"><li id="my_score"></li></a>
+		</ul>
+	</div>
+	<script type="text/javascript" src="scripts/cookie_util.js"></script>
+	<script type="text/javascript" src="scripts/js/path.js"></script>
+	<script type="text/javascript" src="scripts/js/index.js"></script>
+</body>
+</html>

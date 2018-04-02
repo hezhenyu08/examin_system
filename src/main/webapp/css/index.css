@@ -1,0 +1,103 @@
+@charset "UTF-8";
+html, body {
+	height: 100%;
+	background-color: #F1F1F1;
+	position: relative;
+	
+}
+#logo{
+	width:80%;
+	height:59.64px;
+	background-color: #393D49;
+	float: left;
+}
+.layui-nav{
+	width:20%;
+	float: left;
+	border-radius:0px;
+}
+/*logo字体样式*/
+#logo span{
+	line-height: 60px;
+	margin-left: 20px;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 2px;
+	color: #fafafa;
+}
+.layui-nav .layui-nav-item{
+	margin-left: 10px;
+}
+/*设置内容高宽*/
+#body{
+	position: absolute;
+	top: 59.64px;
+    bottom: 0px;
+}
+
+/*让body中列表横排*/
+#body ul{
+	top: 50%;
+    left: 5%;
+}
+#body ul li{
+	float: left;
+	list-style:none;
+	margin-left:20px;
+	margin-top: 10px
+}
+/*设置将图片隐藏,设置li大小*/
+#examin_pic_ul li{
+	display: none;
+	width: 250px;
+	height: 250px;
+	background-position:center;
+	background-size:250px;
+	text-align: center;
+}
+
+/*设置模板图片居中*/
+#body{
+	width:100%;
+	display: flex;
+}
+#examin_pic_ul{
+	margin:auto;
+}
+/*添加各个模板背景图片*/
+#subject_manage{
+	background-image: url(../img/subject_manage.png);
+}
+#user_manage{
+	background-image: url(../img/user_manage.png);
+}
+#examin_arrange{
+	background-image: url(../img/examin_arrange.png);
+}
+#examin_manage{
+	background-image: url(../img/examin_manage.png);
+}
+#my_test{
+	background-image: url(../img/my_test.png);
+}
+#my_examin{
+	background-image: url(../img/my_examin.png);
+}
+#my_score{
+	background-image: url(../img/my_score.png);
+}
+/*模板名称样式*/
+.funciton_name{
+	font-weight: bold;
+	font-size: 20px;
+	margin-top:58%
+}
+/*模板描述样式*/
+.function_desc{
+	font-size: 14px;
+	margin-top:10px;
+}
+#examin_pic_ul li:hover {
+	background-size:280px;
+	transform:scale(1.12);
+}
